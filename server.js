@@ -32,6 +32,10 @@ async function crm(){
         `)
     const numSelect = parseInt(action)
     console.log(action)
+    if (action === null){
+        await mongoose.connection.close() 
+        process.exit()
+    }
 
     if(numSelect > 5 || numSelect === 0 || isNaN(numSelect)){
         console.log('Please provide a correct number input')

@@ -30,14 +30,14 @@ async function crm(){
         
         Number of action to run: 
         `)
-    // parseInt(action)
-    // console.log(action)
+    const numSelect = parseInt(action)
+    console.log(action)
 
-    // if(action > 5 || action === 0 || action !== Number){
-    //     console.log('Please provide a correct number input')
-    //     crm()
-    //     return
-    // }
+    if(numSelect > 5 || numSelect === 0 || isNaN(numSelect)){
+        console.log('Please provide a correct number input')
+        crm()
+        return
+    }
     if(action === '1'){
         custName = prompt(`Please enter customer Name: `)
         custAge = prompt(`Please enter customer Age: `)
